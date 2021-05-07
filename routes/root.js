@@ -120,7 +120,7 @@ async function drawTable(rq)  {
       .printImage(bgi, 0, 0)
       .printImage(ci0, c0col, c0lin)
       .printImage(ci1, c1col, c1lin)
-      .printImage(ci2, c2col, c3lin)
+      .printImage(ci2, c2col, c2lin)
       .printImage(ci3, c3col, c3lin)
       .printImage(ci4, c4col, c4lin)
       .printImage(ci5, c5col, c5lin)

@@ -1,1 +1,3 @@
 # fastify_tcgCanvas
+<a href="https://deepscan.io/dashboard#view=project&tid=14008&pid=17093&bid=378871"><img src="https://deepscan.io/api/teams/14008/projects/17093/branches/378871/badge/grade.svg" alt="DeepScan grade"></a>
+<a href="https://repl.it/github/z1r343l/fastify_tcgcanvas" rel="nofollow"><img src="https://camo.githubusercontent.com/155692ac00709d7852f891ab2c42d28a1e836beecb8e1413ff8e098d5ff70d38/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f6b6f676e6973652f7265706c2e69742d6d6f62696c65" alt="Run on Repl.it" data-canonical-src="https://repl.it/badge/github/z1r343l/fastify_tcgcanvas" style="max-width:200%;"></a>
