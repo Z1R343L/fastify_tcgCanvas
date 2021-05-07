@@ -1,0 +1,37 @@
+{
+  "name": "fastify_tcgCanvas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap test/**/*.test.js",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Z1R343L/fastify_tcgCanvas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Z1R343L/fastify_tcgCanvas/issues"
+  },
+  "homepage": "https://github.com/Z1R343L/fastify_tcgCanvas#readme",
+  "dependencies": {
+    "canvas": "^2.7.0",
+    "canvas-constructor": "^4.1.0",
+    "fastify": "^3.0.0",
+    "fastify-autoload": "^3.7.1",
+    "fastify-cli": "^2.10.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.1.0"
+  },
+  "devDependencies": {
+    "tap": "^14.11.0"
+  }
+}
