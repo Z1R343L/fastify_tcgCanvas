@@ -9,7 +9,7 @@ const dummyCard = "basep-38";
 const defBg = "https://cdn.discordapp.com/attachments/745028626206031973/840358497110589440/TmNB9Rj.jpg";
 
 function resolveCard(cId) {
-  const cs = cId.split('-');
+  const cs = cId.split("-");
   const curl = cardsUrl + cs[0] + "/" + cs[1] + ".png";
   return curl;
 }
