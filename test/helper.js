@@ -3,7 +3,7 @@
 // This file contains code that we reuse
 // between our tests.
 
-const Fastify = require("fastify");
+const fastify = require("fastify");
 const fp = require("fastify-plugin");
 const app = require("../app");
 
@@ -15,7 +15,7 @@ function config () {
 
 // automatically build and tear down our instance
 function build (t) {
-  const fapp = Fastify();
+  const fapp = fastify();
 
   // fastify-plugin ensures that all decorators
   // are exposed for testing purposes, this is
