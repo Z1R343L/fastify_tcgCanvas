@@ -1,12 +1,12 @@
-'use strict'
+'use strict';
 
-const { resolveImage, Canvas } = require("canvas-constructor")
+const { resolveImage, Canvas } = require("canvas-constructor");
 
-const card_hight = 342
-const card_width = 245
+const card_hight = 342;
+const card_width = 245;
 const cards_url = 'https://images.pokemontcg.io/';
-const dummy_card = 'basep-38'
-const def_bg = 'https://cdn.discordapp.com/attachments/745028626206031973/840358497110589440/TmNB9Rj.jpg'
+const dummy_card = 'basep-38';
+const def_bg = 'https://cdn.discordapp.com/attachments/745028626206031973/840358497110589440/TmNB9Rj.jpg';
 
 function resolveCard(cId) {
   const cs = cId.split('-');
@@ -137,7 +137,7 @@ module.exports = async function (fastify, opts) {
     const rq = request.query;
     reply.type('image/png');
     await drawTable(rq).then(b => {
-      reply.send(b)
+      reply.send(b);
     })
   })
 }
