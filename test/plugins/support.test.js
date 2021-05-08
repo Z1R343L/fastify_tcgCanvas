@@ -5,8 +5,8 @@ const fastify = require("fastify");
 const support = require("../../plugins/support");
 
 test("support works standalone", async (t) => {
-  const fastify = fastify();
-  fastify.register(support);
+  const fastifyf = fastify();
+  fastifyf.register(support);
 
   await fastify.ready();
   t.equal(fastify.someSupport(), "hugs");
