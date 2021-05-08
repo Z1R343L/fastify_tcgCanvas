@@ -47,8 +47,8 @@ async function drawTable(rq)  {
   const col3 = col2 + padding + cardWidth;
   const col4 = col3 + padding + cardWidth;
   const col5 = col4 + padding + cardWidth;
-  let canvas_w;
-  let canvas_h;
+  let canvasWidth;
+  let canvasHeight;
   let c0col;
   let c0lin;
   let c1col;
@@ -70,8 +70,8 @@ async function drawTable(rq)  {
   let c9col;
   let c9lin;
   if (col === 5) {
-    canvas_w = (cardWidth*5) + (padding*6);
-    canvas_h = (cardHight*2) + (padding*3);
+    canvasWidth = (cardWidth*5) + (padding*6);
+    canvasHeight = (cardHight*2) + (padding*3);
     c0col = col1;
     c0lin = lin1
     c1col = col2;
@@ -93,8 +93,8 @@ async function drawTable(rq)  {
     c9col = col5;
     c9lin = lin2;
   } else {
-    canvas_w = (cardWidth*4) + (padding*5);
-    canvas_h = (cardHight*3) + (padding*4);
+    canvasWidth = (cardWidth*4) + (padding*5);
+    canvasHeight = (cardHight*3) + (padding*4);
     c0col = col1;
     c0lin = lin1;
     c1col = col2;
@@ -116,7 +116,7 @@ async function drawTable(rq)  {
     c9col = col2;
     c9lin = lin3;
   }
-  const buffer = await new Canvas(canvas_w, canvas_h)
+  const buffer = await new Canvas(canvasWidth, canvasHeight)
       .printImage(bgi, 0, 0)
       .printImage(ci0, c0col, c0lin)
       .printImage(ci1, c1col, c1lin)
@@ -136,8 +136,8 @@ module.exports = async function (fastify, opts) {
   fastify.get("/", async function (request, reply) {
     const rq = request.query;
     reply.type("image/png");
-    await drawTable(rq).then(b => {
+    await drawTable(rq).then((b) => {
       reply.send(b);
-    })
+    });
   })
 }
