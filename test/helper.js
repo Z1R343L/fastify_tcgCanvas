@@ -15,7 +15,7 @@ function config () {
 
 // automatically build and tear down our instance
 function build (t) {
-  const app = Fastify()
+  const app = Fastify();
 
   // fastify-plugin ensures that all decorators
   // are exposed for testing purposes, this is
@@ -25,7 +25,7 @@ function build (t) {
   // tear down our app after we are done
   t.tearDown(app.close.bind(app));
 
-  return app
+  return app;
 }
 
 module.exports = {

@@ -15,9 +15,9 @@ function resolveCard(cId) {
 }
 
 async function drawTable(rq)  {
-  let col; if (!rq.col) {col = 5} else {col=rq.col}
+  let col; if (!rq.col) {col = 5;} else {col=rq.col;}
   let padding; if (!rq.padding) {padding=15} else {padding=parseInt(rq.padding)}
-  let bguri; if(!rq.bg) {bguri = def_bg;} else {bguri = rq.bg}
+  let bguri; if(!rq.bg) {bguri = def_bg;} else {bguri = rq.bg;}
   let card0; if (!rq.c0) {card0 = dummyCard;} else {card0 = rq.c0;}
   let card1; if (!rq.c1) {card1 = dummyCard;} else {card1 = rq.c1;}
   let card2; if (!rq.c2) {card2 = dummyCard;} else {card2 = rq.c2;}
@@ -73,7 +73,7 @@ async function drawTable(rq)  {
     canvasWidth = (cardWidth*5) + (padding*6);
     canvasHeight = (cardHight*2) + (padding*3);
     c0col = col1;
-    c0lin = lin1
+    c0lin = lin1;
     c1col = col2;
     c1lin = lin1;
     c2col = col3;
@@ -140,4 +140,4 @@ module.exports = async function (fastify, opts) {
       reply.send(b);
     });
   })
-}
+};
