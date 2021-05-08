@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const { resolveImage, Canvas } = require("canvas-constructor");
 
@@ -6,7 +6,7 @@ const cardHight = 342;
 const cardWidth = 245;
 const cardsUrl = "https://images.pokemontcg.io/";
 const dummyCard = "basep-38";
-const def_bg = "https://cdn.discordapp.com/attachments/745028626206031973/840358497110589440/TmNB9Rj.jpg";
+const defBg = "https://cdn.discordapp.com/attachments/745028626206031973/840358497110589440/TmNB9Rj.jpg";
 
 function resolveCard(cId) {
   const cs = cId.split('-');
@@ -16,8 +16,8 @@ function resolveCard(cId) {
 
 async function drawTable(rq)  {
   let col; if (!rq.col) {col = 5;} else {col=rq.col;}
-  let padding; if (!rq.padding) {padding=15} else {padding=parseInt(rq.padding)}
-  let bguri; if(!rq.bg) {bguri = def_bg;} else {bguri = rq.bg;}
+  let padding; if (!rq.padding) {padding=15;} else {padding=parseInt(rq.padding, 10);}
+  let bguri; if(!rq.bg) {bguri = defBg;} else {bguri = rq.bg;}
   let card0; if (!rq.c0) {card0 = dummyCard;} else {card0 = rq.c0;}
   let card1; if (!rq.c1) {card1 = dummyCard;} else {card1 = rq.c1;}
   let card2; if (!rq.c2) {card2 = dummyCard;} else {card2 = rq.c2;}
@@ -139,5 +139,5 @@ module.exports = async function (fastify, opts) {
     await drawTable(rq).then((b) => {
       reply.send(b);
     });
-  })
+  });
 };

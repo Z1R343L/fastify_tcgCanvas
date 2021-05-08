@@ -10,7 +10,7 @@ const App = require("../app");
 // Fill in this config with all the configurations
 // needed for testing the application
 function config () {
-  return {}
+  return {};
 }
 
 // automatically build and tear down our instance

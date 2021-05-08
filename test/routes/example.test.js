@@ -10,7 +10,7 @@ test("example is loaded", async (t) => {
     url: "/example"
   });
   t.equal(res.payload, "this is an example");
-})
+});
 
 // inject callback style:
 //
