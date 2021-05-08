@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const { test } = require("tap");
 const Fastify = require("fastify");

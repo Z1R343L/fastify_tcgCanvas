@@ -4,13 +4,13 @@ const { resolveImage, Canvas } = require("canvas-constructor");
 
 const cardHight = 342;
 const cardWidth = 245;
-const cards_url = "https://images.pokemontcg.io/";
+const cardsUrl = "https://images.pokemontcg.io/";
 const dummyCard = "basep-38";
 const def_bg = "https://cdn.discordapp.com/attachments/745028626206031973/840358497110589440/TmNB9Rj.jpg";
 
 function resolveCard(cId) {
   const cs = cId.split('-');
-  const curl = cards_url + cs[0] + "/" + cs[1] + ".png";
+  const curl = cardsUrl + cs[0] + "/" + cs[1] + ".png";
   return curl;
 }
 
