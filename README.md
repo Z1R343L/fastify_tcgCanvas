@@ -25,10 +25,13 @@ data-canonical-src="https://repl.it/badge/github/z1r343l/fastify_tcgcanvas" styl
 python:
   <code>
     from requests import PreparedRequest
-    pr = PreparedRequest()
-    pr.prepare_url(
-        url = "http://cloud7827177.nitrado.cloud:3030/",
+pr = PreparedRequest()
+pr.prepare_url(
+        url = "https://fastifytcgcanvas.jane4.repl.co",
         params = {
+        "bg": "https://cdn.discordapp.com/attachments/745028626206031973/839715940416618496/table_up.jpg",
+        "col": 4,
+        "padding": 10,
         "c0": "swsh5-1",
         "c1": "swsh5-2",
         "c2": "swsh5-3",
@@ -41,6 +44,14 @@ python:
         "c9": "swsh5-10"
         }
     )
-    print(pr.url
+print(pr.url)
+  </code>
+  result:
+  <code>
+  https://fastifytcgcanvas.jane4.repl.co/?bg=https%3A%2F%2Fcdn.discordapp.com%2Fattachments%2F745028626206031973%2F839715940416618496%2Ftable_up.jpg&col=4&padding=10&c0=swsh5-1&c1=swsh5-2&c2=swsh5-3&c3=swsh5-4&c4=swsh5-5&c5=swsh5-6&c6=swsh5-7&c7=swsh5-8&c8=swsh5-9&c9=swsh5-10
+  
+  [Program finished]
   </code>
  </pre>
+ <img src=https://cdn.discordapp.com/attachments/745028626206031973/840536239962718208/Download_2.png>
+ <hr>
