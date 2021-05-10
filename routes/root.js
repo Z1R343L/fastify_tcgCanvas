@@ -6,7 +6,6 @@ const cardHight = 342;
 const cardWidth = 245;
 const cardsUrl = "https://images.pokemontcg.io/";
 const dummyCard = "basep-38";
-const defBg = "https://cdn.discordapp.com/attachments/745028626206031973/840358497110589440/TmNB9Rj.jpg";
 
 function resolveCard(cId) {
   const cs = cId.split("-");
@@ -17,7 +16,6 @@ function resolveCard(cId) {
 async function drawTable(rq)  {
   let col; if (!rq.col) {col = 5;} else {col=rq.col;}
   let padding; if (!rq.padding) {padding=15;} else {padding=parseInt(rq.padding, 10);}
-  let bguri; if(!rq.bg) {bguri = defBg;} else {bguri = rq.bg;}
   let card0; if (!rq.c0) {card0 = dummyCard;} else {card0 = rq.c0;}
   let card1; if (!rq.c1) {card1 = dummyCard;} else {card1 = rq.c1;}
   let card2; if (!rq.c2) {card2 = dummyCard;} else {card2 = rq.c2;}
@@ -28,7 +26,6 @@ async function drawTable(rq)  {
   let card7; if (!rq.c7) {card7 = dummyCard;} else {card7 = rq.c7;}
   let card8; if (!rq.c8) {card8 = dummyCard;} else {card8 = rq.c8;}
   let card9; if (!rq.c9) {card9 = dummyCard;} else {card9 = rq.c9;}
-  const bgi = await resolveImage(bguri);
   const ci0 = await resolveImage(resolveCard(card0));
   const ci1 = await resolveImage(resolveCard(card1));
   const ci2 = await resolveImage(resolveCard(card2));
@@ -117,7 +114,6 @@ async function drawTable(rq)  {
     c9lin = lin3;
   }
   const buffer = await new Canvas(canvasWidth, canvasHeight)
-      .printImage(bgi, 0, 0)
       .printImage(ci0, c0col, c0lin)
       .printImage(ci1, c1col, c1lin)
       .printImage(ci2, c2col, c2lin)
