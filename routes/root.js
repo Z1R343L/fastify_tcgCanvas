@@ -1,6 +1,6 @@
 "use strict";
 
-const { resolveImage, Canvas } = require("canvas-constructor");
+const { resolveImage, Canvas } = require("canvas-constructor/skia");
 
 const cardHight = 342;
 const cardWidth = 245;
@@ -124,7 +124,7 @@ async function drawTable(rq)  {
       .printImage(ci7, c7col, c7lin)
       .printImage(ci8, c8col, c8lin)
       .printImage(ci9, c9col, c9lin)
-      .toBufferAsync();
+      .toBuffer();
   return buffer;
 }
 
